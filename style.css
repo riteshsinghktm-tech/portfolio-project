@@ -1,79 +1,283 @@
+/* ===== GLOBAL ===== */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #dbeafe, #eff6ff);
-    color: #1e3a8a;
+    background: linear-gradient(180deg, #0a0f2c, #000);
+    color: white;
 }
 
-/* Navbar */
-.navbar {
-    background: rgba(59,130,246,0.8);
-    color: white;
-    padding: 15px;
-    text-align: center;
+/* HEADINGS */
+h1, h2, h3, nav h2 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 46px;
+    color: #4da6ff;
+    margin-bottom: 25px;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: #0b0b0b;
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
-/* Hero */
-.hero {
-    height: 100vh;
+nav h2 {
+    font-size: 26px;
+}
+
+nav h2 span {
+    color: #00bfff;
+}
+
+nav ul {
     display: flex;
-    flex-direction: column;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 17px;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #00bfff;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #00bfff;
+}
+
+/* ===== HERO ===== */
+.hero {
+    position: relative;
+    height: 90vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/* Typing effect */
-.typing span {
-    color: #3b82f6;
-}
-
-/* Sections */
-.section {
-    padding: 60px;
     text-align: center;
+    overflow: hidden;
 }
 
-/* Cards */
+/* BACKGROUND IMAGE LAYER */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') center/cover no-repeat;
+    z-index: 0;
+    animation: zoomBg 20s infinite alternate;
+}
+
+/* DARK OVERLAY */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+/* TEXT ABOVE EVERYTHING */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* TEXT STYLE */
+.hero h1 {
+    font-size: 65px;
+    color: white;
+    animation: slideDown 1s ease;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #ccc;
+    animation: fadeIn 2s ease;
+}
+
+/* ===== SECTION ===== */
+section {
+    padding: 80px 60px;
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease forwards;
+}
+
+section:nth-child(2) { animation-delay: 0.2s; }
+section:nth-child(3) { animation-delay: 0.4s; }
+section:nth-child(4) { animation-delay: 0.6s; }
+section:nth-child(5) { animation-delay: 0.8s; }
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ===== TIMELINE ===== */
+.timeline-item {
+    background: rgba(0, 191, 255, 0.1);
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 15px;
+    width: 60%;
+    transition: 0.4s;
+}
+
+.timeline-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 0 20px rgba(0,191,255,0.4);
+}
+
+.timeline-item:nth-child(2) { animation-delay: 0.2s; }
+.timeline-item:nth-child(3) { animation-delay: 0.4s; }
+.timeline-item:nth-child(4) { animation-delay: 0.6s; }
+
+/* ===== CARDS (Technical Catalog) ===== */
 .cards {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
 .card {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    width: 120px;
-    transition: 0.3s;
+    background: linear-gradient(135deg, #0a0f2c, #111a44);
+    padding: 30px;
+    border-radius: 20px;
+    width: 280px;
+    transition: 0.4s;
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 30px rgba(0, 191, 255, 0.5);
 }
 
-/* Contact */
-input, textarea {
-    width: 80%;
-    padding: 12px;
+/* ===== CHIPS (Lifestyle & Media Picks) ===== */
+.chip {
+    display: inline-block;
+    padding: 12px 20px;
     margin: 10px;
-    border-radius: 8px;
-    border: none;
-}
-
-button {
-    background: #3b82f6;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
+    border-radius: 25px;
+    background: rgba(0, 191, 255, 0.1);
+    border: 1px solid #00bfff;
+    font-size: 18px;
+    transition: 0.3s;
     cursor: pointer;
 }
 
+.chip:hover {
+    background: #00bfff;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* ===== FORM ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+input, textarea {
+    width: 50%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+
+    /* ADD THIS */
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: 1px solid rgba(0, 191, 255, 0.3);
+}
+
+textarea {
+    height: 120px;
+}
+
+/* FIXED BUTTON (FULL WIDTH & CENTERED) */
+button {
+    width: 50%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #00bfff;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
 button:hover {
-    background: #2563eb;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00bfff;
+}
+
+/* ===== FOOTER ===== */
+footer, .footer-text {
+    text-align: center;
+    padding: 30px;
+    color: #aaa;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes zoomBg {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+input::placeholder,
+textarea::placeholder {
+    color: #aaa;
 }
