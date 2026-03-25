@@ -2,116 +2,87 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ritesh Singh Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <h1>Ritesh Singh</h1>
-    <p>BCA Student | Developer</p>
-</header>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <h2 class="logo">Ritesh.dev</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#milestones">Milestones</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-<section>
+<!-- HERO -->
+<section class="hero">
+    <h1 class="glow">Ritesh Singh</h1>
+    <p>BCA Student | Developer | Tech Enthusiast</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="card">
 <h2>About Me</h2>
 <p>
-I am Ritesh Singh ,BCA student at Kristu Jayanti University with a deep passion for coding and logic. Beyond the screen, I am heavily inspired by the work ethic of players such as Jayson Tatum, Kyrie Irving, and Kobe Bryant. Basketball has been a massive influence on my life, teaching me the discipline that I apply to my programming every day. I'm also a huge fan of story-based PC games; I love a good narrative and the immersive worlds that developers create.
+I am Ritesh Singh, BCA student at Kristu Jayanti University with a deep passion for coding and logic.
+Inspired by players like Jayson Tatum, Kyrie Irving, and Kobe Bryant, I apply discipline in programming.
+I enjoy story-based PC games and immersive digital experiences.
 
-This portfolio serves as a live demonstration of my ability to integrate frontend aesthetics with robust backend systems using Node.js and Express at Kristu Jayanti University.
+This portfolio demonstrates my ability to integrate frontend aesthetics with backend systems using Node.js and Express.
 </p>
 </section>
 
-<section>
+<!-- MILESTONES -->
+<section id="milestones" class="card">
 <h2>Milestones</h2>
-
-<div class="card">
-<h3>2022 - Foundational Mastery</h3>
-<p>Started attending Java and C courses at Aptech Education, which sparked my peak interest in Computer Science and established my core programming logic.</p>
-</div>
-
-<div class="card">
-<h3>2023 - Academic Excellence</h3>
-<p>Advanced my knowledge in CS, placing me significantly ahead of my batch and allowing me to top my cohort in Computer Science.</p>
-</div>
-
-<div class="card">
-<h3>2025 - High-School Graduation</h3>
-<p>Completed 12th Grade with a stellar 90% in the Commerce stream. Recognized as the subject topper in Informatics Practices, demonstrating technical excellence.</p>
-</div>
-
-<div class="card">
-<h3>2025 - 2026 - Present - Higher Education</h3>
-<p>Initiated my Bachelor of Computer Applications (BCA) journey at Kristu Jayanti University, focusing on advanced software paradigms.</p>
-</div>
-
+<ul>
+<li><b>2022:</b> Started Java & C at Aptech Education</li>
+<li><b>2023:</b> Topped Computer Science in class</li>
+<li><b>2025:</b> Scored 90% in Commerce</li>
+<li><b>Present:</b> Pursuing BCA at Kristu Jayanti</li>
+</ul>
 </section>
 
-<section>
+<!-- PROJECTS -->
+<section id="projects" class="card grid">
 <h2>Technical Catalog</h2>
 
-<div class="card">
-<h3>Enterprise Event Manager</h3>
-<p>A robust web application built using Java Servlets and JDBC connectivity for real-time tracking.</p>
-</div>
-
-<div class="card">
-<h3>TaskFlow Manager</h3>
-<p>A specialized task management tool utilizing Java backend services and JDBC for data persistence.</p>
-</div>
-
-<div class="card">
-<h3>Native Calculator</h3>
-<p>A high-precision mathematical engine developed in C, focusing on memory efficiency.</p>
-</div>
-
-<div class="card">
-<h3>Web Architecture</h3>
-<p>Developed multiple responsive websites throughout my career, focusing on modern UI/UX principles.</p>
-</div>
+<div class="box">Enterprise Event Manager</div>
+<div class="box">TaskFlow Manager</div>
+<div class="box">Native Calculator</div>
+<div class="box">Web Architecture</div>
 
 </section>
 
-<section>
+<!-- BEYOND -->
+<section class="card">
 <h2>Beyond the Code</h2>
-<ul>
-<li>Basketball</li>
-<li>Guitar</li>
-<li>Gym & Fitness</li>
-<li>Music</li>
-<li>Travelling</li>
-<li>Books</li>
-<li>Cooking</li>
-<li>Communication</li>
-</ul>
+<p>Basketball | Guitar | Gym | Music | Travel | Books | Cooking</p>
 </section>
 
-<section>
+<!-- MEDIA -->
+<section class="card">
 <h2>Media Picks</h2>
-<ul>
-<li>Bleach</li>
-<li>Jujutsu Kaisen</li>
-<li>Money Heist</li>
-<li>Naruto</li>
-<li>Pursuit of Happiness</li>
-<li>Black Clover</li>
-<li>Hunter x Hunter</li>
-</ul>
+<p>Bleach | Naruto | Jujutsu Kaisen | Money Heist | Black Clover</p>
 </section>
 
-<section>
-<h2>Live Backend Interface</h2>
+<!-- CONTACT -->
+<section id="contact" class="card">
+<h2>Contact Me</h2>
 
-<form id="contact-form">
-<input type="text" id="name" placeholder="Name" required>
-<input type="email" id="email" placeholder="Email" required>
-<textarea id="message" placeholder="Message" required></textarea>
-<button type="submit">Send Message</button>
+<form id="contactForm">
+<input type="text" placeholder="Name" required>
+<input type="email" placeholder="Email" required>
+<textarea placeholder="Message"></textarea>
+<button type="submit">Send</button>
 </form>
 
+<p id="msg"></p>
 </section>
 
 <script src="script.js"></script>

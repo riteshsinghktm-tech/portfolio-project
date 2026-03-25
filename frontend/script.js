@@ -13,7 +13,7 @@ document.querySelectorAll("section").forEach(section => {
     });
 });
 
-document.getElementById("contact-form").addEventListener("submit", function(e) {
+document.getElementById("contactForm").addEventListener("submit", function(e) {
     e.preventDefault();
-    alert("Message received! Backend works locally.");
+    document.getElementById("msg").innerText = "Message Sent (Backend Ready)";
 });
