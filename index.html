@@ -2,73 +2,131 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio</title>
+<title>Ritesh Singh</title>
 
 <link rel="stylesheet" href="style.css">
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<!-- AOS Animation -->
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
 
-<nav class="navbar">
-    <h2>Portfolio</h2>
+<!-- NAVBAR -->
+<nav>
+<h2>RITESH<span>.</span></h2>
+<ul>
+<li><a href="#home">HOME</a></li>
+<li><a href="#about">PROFILE</a></li>
+<li><a href="#milestones">TIMELINE</a></li>
+<li><a href="#projects">WORK</a></li>
+<li><a href="#lifestyle">LIFESTYLE</a></li>
+<li><a href="#contact">DATABASE</a></li>
+</ul>
 </nav>
 
-<section class="hero">
-    <h1 class="typing">Hello, I'm <span>Ritesh Singh</span></h1>
-    <p>Aspiring Full Stack Developer</p>
-</section>
-
-<section class="section" data-aos="fade-up">
-    <h2>About Me</h2>
-    <p>Passionate about creating modern and user-friendly web applications.</p>
-</section>
-
-<section class="section" data-aos="fade-right">
-    <h2>Education</h2>
-    <p>BCA - Kristu Jayanti College</p>
-    <p>CGPA: 8.5 | Percentage: 85%</p>
-</section>
-
-<section class="section" data-aos="zoom-in">
-    <h2>Skills</h2>
-    <div class="cards">
-        <div class="card">HTML</div>
-        <div class="card">CSS</div>
-        <div class="card">JavaScript</div>
-        <div class="card">MySQL</div>
+<!-- HERO -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Ritesh Singh</h1>
+        <p>BCA Scholar | Java Developer | Tech Visionary</p>
     </div>
 </section>
 
-<section class="section" data-aos="fade-left">
-    <h2>Achievements</h2>
-    <p>Won college tech fest...</p>
+<!-- ABOUT -->
+<section id="about">
+<h2>About Me</h2>
+<p>
+I am Ritesh Singh ,BCA student at Kristu Jayanti University with a deep passion for coding and logic.
+Beyond the screen, I am heavily inspired by the work ethic of players such as Jayson Tatum, Kyrie Irving, and Kobe Bryant.
+Basketball has been a massive influence on my life, teaching me the discipline that I apply to my programming every day.
+I'm also a huge fan of story-based PC games; I love a good narrative and the immersive worlds that developers create.
+
+This portfolio serves as a live demonstration of my ability to integrate frontend aesthetics with robust backend systems using Node.js and Express at Kristu Jayanti University.
+</p>
 </section>
 
-<section class="section" data-aos="fade-up">
-    <h2>Goal</h2>
-    <p>To become a skilled full stack developer.</p>
+<!-- MILESTONES -->
+<section id="milestones">
+<h2>Milestones</h2>
+
+<div class="timeline-item">2022 - Foundational Mastery</div>
+<div class="timeline-item">2023 - Academic Excellence</div>
+<div class="timeline-item">2025 - High-School Graduation (90%)</div>
+<div class="timeline-item">Present - BCA Journey</div>
+
 </section>
 
-<section class="section contact" data-aos="flip-up">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-        <input type="text" id="name" placeholder="Name" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <textarea id="message" placeholder="Message"></textarea>
-        <button type="submit">Send Message</button>
-    </form>
+<!-- TECHNICAL CATALOG -->
+<section id="projects">
+<h2>Technical Catalog</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Enterprise Event Manager</h3>
+<p>A robust web application built using Java Servlets and JDBC connectivity for real-time tracking.</p>
+</div>
+
+<div class="card">
+<h3>TaskFlow Manager</h3>
+<p>A specialized task management tool utilizing Java backend services and JDBC for data persistence.</p>
+</div>
+
+<div class="card">
+<h3>Native Calculator</h3>
+<p>A high-precision mathematical engine developed in C, focusing on memory efficiency.</p>
+</div>
+
+</div>
+
 </section>
 
-<script src="script.js"></script>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init();</script>
+<!-- LIFESTYLE -->
+<section id="lifestyle">
+<h2>Beyond the Code</h2>
+
+<div>
+<span class="chip">Basketball</span>
+<span class="chip">Guitar</span>
+<span class="chip">Gym</span>
+<span class="chip">Music</span>
+<span class="chip">Travelling</span>
+<span class="chip">Books</span>
+<span class="chip">Cooking</span>
+<span class="chip">Communication</span>
+</div>
+
+<h2>Media Picks</h2>
+
+<div>
+<span class="chip">Bleach</span>
+<span class="chip">Jujutsu Kaisen</span>
+<span class="chip">Money Heist</span>
+<span class="chip">Naruto</span>
+<span class="chip">Black Clover</span>
+<span class="chip">Hunter x Hunter</span>
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+<h2>Live Backend Interface</h2>
+
+<form class="contact-form">
+<input type="text" placeholder="Name" required>
+<input type="email" placeholder="Email" required>
+<textarea placeholder="Message" required></textarea>
+
+<button type="submit">EXECUTE SYNC</button>
+</form>
+
+<p class="footer-text">
+Ritesh Singh • Kristu Jayanti University • 2026
+</p>
+
+</section>
 
 </body>
 </html>
