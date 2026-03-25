@@ -1,79 +1,80 @@
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #dbeafe, #eff6ff);
-    color: #1e3a8a;
 }
 
-/* Navbar */
-.navbar {
-    background: rgba(59,130,246,0.8);
+body {
+    background: #0d0d0d;
     color: white;
-    padding: 15px;
+}
+
+header {
     text-align: center;
-    position: sticky;
-    top: 0;
-}
-
-/* Hero */
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Typing effect */
-.typing span {
-    color: #3b82f6;
-}
-
-/* Sections */
-.section {
     padding: 60px;
-    text-align: center;
+    background: linear-gradient(90deg, #000, #1a1a1a);
 }
 
-/* Cards */
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+header h1 {
+    font-size: 42px;
+}
+
+section {
+    padding: 50px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    margin-bottom: 20px;
+    border-left: 4px solid #00bfff;
+    padding-left: 10px;
 }
 
 .card {
-    background: white;
+    background: #1a1a1a;
     padding: 20px;
-    border-radius: 15px;
-    width: 120px;
+    margin: 15px 0;
+    border-radius: 10px;
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transform: scale(1.03);
+    background: #262626;
 }
 
-/* Contact */
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
 input, textarea {
-    width: 80%;
+    margin: 10px 0;
     padding: 12px;
-    margin: 10px;
-    border-radius: 8px;
+    border-radius: 5px;
     border: none;
 }
 
 button {
-    background: #3b82f6;
-    color: white;
-    padding: 12px 25px;
+    padding: 12px;
     border: none;
-    border-radius: 8px;
+    background: #00bfff;
+    color: white;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background: #2563eb;
+    background: #009acd;
 }
