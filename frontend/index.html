@@ -1,90 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Ritesh Singh Portfolio</title>
-<link rel="stylesheet" href="style.css">
-</head>
+body {
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #0a0f2c, #000);
+    color:white;
+}
 
-<body>
+/* NAVBAR */
+nav {
+    display:flex;
+    justify-content:space-between;
+    padding:20px 60px;
+    background:#0b0b0b;
+}
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <h2 class="logo">Ritesh.dev</h2>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#milestones">Milestones</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+nav h2 span {
+    color:#00bfff;
+}
 
-<!-- HERO -->
-<section class="hero">
-    <h1 class="glow">Ritesh Singh</h1>
-    <p>BCA Student | Developer | Tech Enthusiast</p>
-</section>
+nav ul {
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
 
-<!-- ABOUT -->
-<section id="about" class="card">
-<h2>About Me</h2>
-<p>
-I am Ritesh Singh, BCA student at Kristu Jayanti University with a deep passion for coding and logic.
-Inspired by players like Jayson Tatum, Kyrie Irving, and Kobe Bryant, I apply discipline in programming.
-I enjoy story-based PC games and immersive digital experiences.
+nav a {
+    color:#ccc;
+    text-decoration:none;
+    font-weight:500;
+}
 
-This portfolio demonstrates my ability to integrate frontend aesthetics with backend systems using Node.js and Express.
-</p>
-</section>
+/* HERO */
+.hero {
+    height:80vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), #0a0f2c),
+                url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+    background-size:cover;
+}
 
-<!-- MILESTONES -->
-<section id="milestones" class="card">
-<h2>Milestones</h2>
-<ul>
-<li><b>2022:</b> Started Java & C at Aptech Education</li>
-<li><b>2023:</b> Topped Computer Science in class</li>
-<li><b>2025:</b> Scored 90% in Commerce</li>
-<li><b>Present:</b> Pursuing BCA at Kristu Jayanti</li>
-</ul>
-</section>
+.hero-content {
+    text-align:center;
+}
 
-<!-- PROJECTS -->
-<section id="projects" class="card grid">
-<h2>Technical Catalog</h2>
+.profile {
+    width:140px;
+    border-radius:50%;
+    border:4px solid #00bfff;
+}
 
-<div class="box">Enterprise Event Manager</div>
-<div class="box">TaskFlow Manager</div>
-<div class="box">Native Calculator</div>
-<div class="box">Web Architecture</div>
+.hero h1 {
+    font-size:50px;
+}
 
-</section>
+.hero p {
+    color:#ccc;
+}
 
-<!-- BEYOND -->
-<section class="card">
-<h2>Beyond the Code</h2>
-<p>Basketball | Guitar | Gym | Music | Travel | Books | Cooking</p>
-</section>
+/* SECTION */
+section {
+    padding:60px 100px;
+    text-align:center;
+}
 
-<!-- MEDIA -->
-<section class="card">
-<h2>Media Picks</h2>
-<p>Bleach | Naruto | Jujutsu Kaisen | Money Heist | Black Clover</p>
-</section>
+section h2 {
+    color:#4da6ff;
+    font-size:40px;
+    margin-bottom:20px;
+}
 
-<!-- CONTACT -->
-<section id="contact" class="card">
-<h2>Contact Me</h2>
+/* TIMELINE */
+.timeline {
+    border-left:3px solid #00bfff;
+    margin-left:50px;
+    padding-left:30px;
+}
 
-<form id="contactForm">
-<input type="text" placeholder="Name" required>
-<input type="email" placeholder="Email" required>
-<textarea placeholder="Message"></textarea>
-<button type="submit">Send</button>
-</form>
+.timeline-item {
+    background: rgba(0, 191, 255, 0.1);
+    padding:20px;
+    margin:20px 0;
+    border-radius:12px;
+}
 
-<p id="msg"></p>
-</section>
+/* CARDS */
+.cards {
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
 
-<script src="script.js"></script>
-</body>
-</html>
+.card {
+    background: linear-gradient(135deg, #0a0f2c, #111a44);
+    padding:30px;
+    border-radius:20px;
+    width:280px;
+    box-shadow:0 0 20px rgba(0,191,255,0.2);
+}
+
+/* FORM */
+input, textarea {
+    width:60%;
+    margin:10px;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+}
+
+button {
+    background:#00bfff;
+    padding:12px 30px;
+    border:none;
+    border-radius:10px;
+    color:white;
+    font-weight:bold;
+}
+
+/* FOOTER */
+footer {
+    text-align:center;
+    padding:30px;
+    color:#aaa;
+}

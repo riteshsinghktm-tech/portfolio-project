@@ -17,3 +17,13 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     e.preventDefault();
     document.getElementById("msg").innerText = "Message Sent (Backend Ready)";
 });
+const elements = document.querySelectorAll(".card, .timeline-item");
+
+window.addEventListener("scroll", () => {
+    elements.forEach(el => {
+        const pos = el.getBoundingClientRect().top;
+        if (pos < window.innerHeight - 100) {
+            el.classList.add("show");
+        }
+    });
+});
